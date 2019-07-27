@@ -13,10 +13,6 @@ module.exports = {
       autoIncrement: true,
       columnName:'ID_USUARIO'
     },
-    id_tipo_usuario:{
-      type:'number',
-      columnName:'ID_TIPO_USUARIO',
-    },
     correo_electronico:{
       type:'string',
       isEmail: true,

@@ -1,0 +1,26 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     21/7/2019 14:23:00                           */
+/*==============================================================*/
+
+drop database if exists TRANSPORTE_SEGURO;
+
+create database TRANSPORTE_SEGURO;
+
+USE TRANSPORTE_SEGURO;
+
+INSERT 
+INTO tipousuario (NOMBRE)
+VALUES 	('AGENTE'),
+		('ADMINISTRADOR'),
+        ('CLIENTE');
+
+INSERT
+INTO tipodenuncia (NOMBRE)
+VALUES ('TRANSITO');
+
+INSERT
+INTO USUARIO (CORREO_ELECTRONICO,NOMBRE_COMPLETO,NOMBRE_USUARIO,CONTRASENA,FK_ID_TIPO_USUARIO) 
+VALUES 	('administrador@epn.edu.ec','ADMINISTRADOR','admin','admin',2),
+		('agente@epn.edu.ec','AGENTE','agente','agente',1),
+        ('fernando@epn.edu.ec','Fernando','fernando','12345',3);
