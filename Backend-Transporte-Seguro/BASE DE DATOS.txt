@@ -1,0 +1,118 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     21/7/2019 14:23:00                           */
+/*==============================================================*/
+
+drop database if exists TRANSPORTE_SEGURO;
+
+create database TRANSPORTE_SEGURO;
+
+USE TRANSPORTE_SEGURO;
+
+drop table if exists COMENTARIO;
+
+drop table if exists DENUNCIA;
+
+drop table if exists FOTOGRAFIA;
+
+drop table if exists TIPO_DENUNCIA;
+
+drop table if exists TIPO_USUARIO;
+
+drop table if exists USUARIO;
+
+/*==============================================================*/
+/* Table: COMENTARIO                                            */
+/*==============================================================*/
+create table COMENTARIO
+(
+   ID_COMENTARIO        int not null,
+   ID_USUARIO           int,
+   ID_DENUNCIA          int,
+   TIPO_MENSAJE         int,
+   MENSAJE              text,
+   FECHA                date,
+   primary key (ID_COMENTARIO)
+);
+
+/*==============================================================*/
+/* Table: DENUNCIACABECERA                                      */
+/*==============================================================*/
+create table DENUNCIA
+(
+   ID_DENUNCIA          int not null,
+   ID_FOTOGRAFIA        int,
+   ID_USUARIO           int,
+   ID_TIPO_DENUNCIA     int,
+   ID_AGENTE            int,
+   ESTADO               varchar(30),
+   DESCRIPCION          text,
+   LONGITUD             decimal(6,4),
+   LATITUD              decimal(6,4),
+   primary key (ID_DENUNCIA)
+);
+
+/*==============================================================*/
+/* Table: FOTOGRAFIA                                            */
+/*==============================================================*/
+create table FOTOGRAFIA
+(
+   ID_FOTOGRAFIA        int not null,
+   primary key (ID_FOTOGRAFIA)
+);
+
+/*==============================================================*/
+/* Table: TIPO_DENUNCIA                                         */
+/*==============================================================*/
+create table TIPO_DENUNCIA
+(
+   ID_TIPO_DENUNCIA     int not null,
+   NOMBRE               varchar(30),
+   primary key (ID_TIPO_DENUNCIA)
+);
+
+/*==============================================================*/
+/* Table: TIPO_USUARIO                                          */
+/*==============================================================*/
+create table TIPO_USUARIO
+(
+   ID_TIPO_USUARIO      int not null,
+   NOMBRE               varchar(30),
+   primary key (ID_TIPO_USUARIO)
+);
+
+/*==============================================================*/
+/* Table: USUARIO                                               */
+/*==============================================================*/
+create table USUARIO
+(
+   ID_USUARIO           int not null,
+   ID_TIPO_USUARIO      int,
+   CORREO_ELECTRONICO   varchar(40),
+   NOMBRE_COMPLETO      varchar(40),
+   NOMBRE_USUARIO       varchar(20),
+   CONTRASENA           varchar(40),
+   primary key (ID_USUARIO)
+);
+
+/*alter table COMENTARIO add constraint FK_RELATIONSHIP_5 foreign key (ID_USUARIO)
+      references USUARIO (ID_USUARIO) on delete restrict on update restrict;
+
+alter table COMENTARIO add constraint FK_RELATIONSHIP_7 foreign key (ID_DENUNCIA)
+      references DENUNCIA (ID_DENUNCIA) on delete restrict on update restrict;
+
+alter table DENUNCIA add constraint FK_RELATIONSHIP_1 foreign key (ID_FOTOGRAFIA)
+      references FOTOGRAFIA (ID_FOTOGRAFIA) on delete restrict on update restrict;
+
+alter table DENUNCIA add constraint FK_RELATIONSHIP_4 foreign key (ID_TIPO_DENUNCIA)
+      references TIPO_DENUNCIA (ID_TIPO_DENUNCIA) on delete restrict on update restrict;
+
+alter table DENUNCIA add constraint FK_RELATIONSHIP_6 foreign key (ID_USUARIO)
+      references USUARIO (ID_USUARIO) on delete restrict on update restrict;
+
+alter table USUARIO add constraint FK_RELATIONSHIP_3 foreign key (ID_TIPO_USUARIO)
+      references TIPO_USUARIO (ID_TIPO_USUARIO) on delete restrict on update restrict;
+*/
+
+SELECT *
+FROM usuario

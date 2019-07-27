@@ -18,7 +18,7 @@ module.exports = {
       type:'string',
       columnName:'NOMBRE'
     },
-    denuncias: {
+    usuarios: {
       collection: 'Usuario',
       via: 'fkTipoUsuario'
     }

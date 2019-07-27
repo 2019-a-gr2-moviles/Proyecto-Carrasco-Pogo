@@ -14,6 +14,10 @@ module.exports = {
       autoIncrement: true,
       columnName:'ID_FOTOGRAFIA'
     },
+    nombre:{
+      type:'string',
+      columnName:'NOMBRE'
+    },
     fkdenuncia:{
       model:'Denuncia',
       columnName:'FK_ID_DENUNCIA'
