@@ -1,7 +1,9 @@
 package com.example.aplicaciontransporteseguro
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.beust.klaxon.Klaxon
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,5 +24,18 @@ class MainActivity : AppCompatActivity() {
               "fkTipoUsuario": null
             }
         """.trimIndent()
+
+        try {
+            val usuarioInstancia = Klaxon()
+                .parse<Usuario>(json)
+            Log.i("http",
+                "Nombre ${usuarioInstancia?.nombre_usuario}")
+            Log.i("http",
+                "ID ${usuarioInstancia?.id}")
+        }catch (e:Exception){
+            Log.i("http",
+                "Error instanciando la empresa")
+        }
+
     }
 }

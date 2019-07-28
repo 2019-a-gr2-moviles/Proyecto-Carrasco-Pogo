@@ -7,4 +7,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="fullname_placeholder">Nick Evans</string>
+    <string name="create_account_header">Crea una cuenta para continuar</string>
+    <string name="fullname">Nombre Completo</string>
+    <string name="email_label">Dirección de email</string>
+    <string name="create_account">Crear Cuenta</string>
+
 </resources>
