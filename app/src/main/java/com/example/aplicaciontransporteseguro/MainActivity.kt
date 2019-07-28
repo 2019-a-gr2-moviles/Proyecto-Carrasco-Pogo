@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                                 Log.i("http","Usuario: ${usuarioParseado.contrasena}")
                                 if((txt_user.text.toString().equals(usuarioParseado.correo_electronico)) && (txt_pass.text.toString().equals(usuarioParseado.contrasena))){
                                     Log.i("http","${txt_user.text}")
+                                    acceder()
                                 }
                             }
                         }

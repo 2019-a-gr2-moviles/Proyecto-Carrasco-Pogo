@@ -31,7 +31,7 @@ class MenuPrincipalActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu_principal)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        textMessage = findViewById(R.id.message)
+        //textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
 }
