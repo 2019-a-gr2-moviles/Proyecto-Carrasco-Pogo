@@ -23,7 +23,8 @@
             android:hint="@string/fullname_placeholder"
             app:layout_constraintTop_toBottomOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="@+id/textView4" app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="4dp"/>
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="4dp"
+            android:autofillHints="@string/fullname_placeholder"/>
     <TextView
             android:text="@string/fullname"
             android:layout_width="wrap_content"
@@ -49,7 +50,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="@+id/textView5" app:layout_constraintEnd_toEndOf="@+id/textView5"
             app:layout_constraintHorizontal_bias="0.0" android:hint="@string/user_placeholder"
-            android:layout_marginTop="4dp"/>
+            android:layout_marginTop="4dp" android:autofillHints="@string/user_placeholder"/>
     <TextView
             android:text="@string/pass_label"
             android:layout_width="wrap_content"
@@ -68,7 +69,7 @@
             app:layout_constraintStart_toStartOf="@+id/textView6" app:layout_constraintEnd_toEndOf="@+id/textView6"
             app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="4dp"/>
     <Button
-            android:text="Crear Cuenta"
+            android:text="@string/create_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_create_account" app:layout_constraintStart_toStartOf="@+id/txt_password"

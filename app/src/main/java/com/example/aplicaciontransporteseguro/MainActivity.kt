@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.beust.klaxon.Klaxon
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +37,17 @@ class MainActivity : AppCompatActivity() {
             Log.i("http",
                 "Error instanciando la empresa")
         }
+
+        btn_login.setOnClickListener {
+
+        }
+    }
+
+    fun Acceder(){
+
+    }
+
+    fun crearUsuario(){
 
     }
 }
