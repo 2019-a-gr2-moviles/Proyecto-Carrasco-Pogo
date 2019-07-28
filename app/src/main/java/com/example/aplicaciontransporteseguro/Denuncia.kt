@@ -1,5 +1,8 @@
 package com.example.aplicaciontransporteseguro
 
+import java.util.*
+import kotlin.collections.ArrayList
+
 class Denuncia(var id:Int,
                var id_agente:Int,
                var estado:String,
@@ -10,5 +13,10 @@ class Denuncia(var id:Int,
                var updatedAt:Long,
                var fkUsuario:Int,
                var fkTipoDenuncia:Int) {
-
+    var fechaCreacion: Date
+    var fechaActualizacion: Date
+    init {
+        fechaCreacion = Date(createdAt)
+        fechaActualizacion = Date(updatedAt)
+    }
 }
