@@ -36,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                             val usuarioParseado = Klaxon()
                                 .parse<Usuario>(data)
                             if(usuarioParseado != null){
-                                Log.i("http","${usuarioParseado.correo_electronico}")
-                                Log.i("http","${usuarioParseado.contrasena}")
-                                if(txt_user.text.toString() === usuarioParseado.correo_electronico && txt_pass.text.toString() === usuarioParseado.contrasena){
-                                    Acceder()
+                                Log.i("http","Correo: ${usuarioParseado.correo_electronico}")
+                                Log.i("http","Usuario: ${usuarioParseado.contrasena}")
+                                if((txt_user.text.toString().equals(usuarioParseado.correo_electronico)) && (txt_pass.text.toString().equals(usuarioParseado.contrasena))){
+                                    Log.i("http","${txt_user.text}")
                                 }
                             }
                         }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun Acceder(){
+    fun acceder(){
         val intentExplicito = Intent(
             this,
             MenuPrincipalActivity::class.java
