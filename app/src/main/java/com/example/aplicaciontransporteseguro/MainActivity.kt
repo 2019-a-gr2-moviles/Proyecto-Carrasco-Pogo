@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.beust.klaxon.Klaxon
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,10 +34,15 @@ class MainActivity : AppCompatActivity() {
                 "Nombre ${usuarioInstancia?.nombre_usuario}")
             Log.i("http",
                 "ID ${usuarioInstancia?.id}")
+            if (usuarioInstancia != null){
+                Log.i("http",
+                    "Fecha ${Date(usuarioInstancia.createdAt)}")
+            }
         }catch (e:Exception){
             Log.i("http",
                 "Error instanciando la empresa")
         }
+
 
         btn_login.setOnClickListener {
 
