@@ -12,5 +12,6 @@
     <string name="fullname">Nombre Completo</string>
     <string name="email_label">Dirección de email</string>
     <string name="create_account">Crear Cuenta</string>
-
+    <string name="crerate_account_link">Crea una cuenta aquí</string>
+    <string name="new_to_system">Nuevo en el sistema</string>
 </resources>
