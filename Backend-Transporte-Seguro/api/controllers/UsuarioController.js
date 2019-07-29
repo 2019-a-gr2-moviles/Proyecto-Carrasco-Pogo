@@ -8,12 +8,12 @@
 module.exports = {
     'Login': async function(req, res){
         var values = req.body;
-        var Usuarios = await Usuario.find({nombre_usuario: values.nombre_usuario, contrasena:values.contrasena});
+        var Usuarios = await Usuario.find({correo_electronico: values.correo_electronico, contrasena:values.contrasena});
         if(Usuarios!=null)
         {
             if(Usuarios.length > 0)
             {
-                return res.json({login:'accede'});
+                return res.json(Usuarios);
             }
             else
             {

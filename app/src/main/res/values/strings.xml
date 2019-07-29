@@ -3,4 +3,15 @@
     <string name="user_label">Dirección de email</string>
     <string name="user_placeholder">usuario@email.com</string>
     <string name="pass_label">Contraseña</string>
+    <string name="title_activity_menu_principal">MenuPrincipalActivity</string>
+    <string name="title_buscar">Buscar</string>
+    <string name="title_home">Home</string>
+    <string name="title_cerrarSesion">Cerrar Sesion</string>
+    <string name="fullname_placeholder">Nick Evans</string>
+    <string name="create_account_header">Crea una cuenta para continuar</string>
+    <string name="fullname">Nombre Completo</string>
+    <string name="email_label">Dirección de email</string>
+    <string name="create_account">Crear Cuenta</string>
+    <string name="crerate_account_link">Crea una cuenta aquí</string>
+    <string name="new_to_system">Nuevo en el sistema</string>
 </resources>

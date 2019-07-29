@@ -49,8 +49,6 @@ module.exports.datastores = {
     *                                                                          *
     ***************************************************************************/
      adapter: 'sails-mysql',
-     url: 'mysql://transporte_seguro:Sistemas.2019@localhost:3306/TRANSPORTE_SEGURO',
+     url: 'mysql://transporte_seguro:Sistemas.2019@localhost:3306/transporte_seguro',
   },
-
-
 };
