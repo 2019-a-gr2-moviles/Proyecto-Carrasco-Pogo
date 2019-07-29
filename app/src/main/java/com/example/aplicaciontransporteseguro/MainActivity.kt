@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val url = "http://192.168.1.145:1337/usuario/3"
+        val url = "http://192.168.1.133:1337/usuario/1"
 
         btn_login.setOnClickListener {
             url.httpGet()
@@ -35,9 +35,7 @@ class MainActivity : AppCompatActivity() {
                             val usuarioParseado = Klaxon()
                                 .parse<Usuario>(data)
                             if(usuarioParseado != null){
-                                Log.i("http","${usuarioParseado.correo_electronico}")
-                                Log.i("http","${usuarioParseado.contrasena}")
-                                if(txt_user.text.toString() === usuarioParseado.correo_electronico && txt_pass.text.toString() === usuarioParseado.contrasena){
+                                if(txt_user.text.toString() == usuarioParseado.correo_electronico && txt_pass.text.toString() == usuarioParseado.contrasena){
                                     Acceder()
                                 }
                             }

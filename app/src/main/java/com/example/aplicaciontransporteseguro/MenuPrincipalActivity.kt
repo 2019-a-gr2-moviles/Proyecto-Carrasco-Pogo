@@ -1,25 +1,24 @@
 package com.example.aplicaciontransporteseguro
 
 import android.os.Bundle
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MenuPrincipalActivity : AppCompatActivity() {
 
-    private lateinit var textMessage: TextView
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+    public val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                textMessage.setText(R.string.title_home)
+                Toast.makeText(this,"Accion 1", Toast.LENGTH_SHORT).show();
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
+                Toast.makeText(this,"Accion 2", Toast.LENGTH_SHORT).show();
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
+                Toast.makeText(this,"Accion 3", Toast.LENGTH_SHORT).show();
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -31,7 +30,6 @@ class MenuPrincipalActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu_principal)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
     }
 }
