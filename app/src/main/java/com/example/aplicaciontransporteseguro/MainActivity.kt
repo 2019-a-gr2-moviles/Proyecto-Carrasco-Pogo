@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun Acceder(){
+    fun acceder(){
         val intentExplicito = Intent(
             this,
             MenuPrincipalActivity::class.java
