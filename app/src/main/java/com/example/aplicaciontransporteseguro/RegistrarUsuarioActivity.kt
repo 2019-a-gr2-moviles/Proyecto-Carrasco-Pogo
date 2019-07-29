@@ -1,6 +1,7 @@
 package com.example.aplicaciontransporteseguro
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -18,7 +19,7 @@ class RegistrarUsuarioActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar_usuario)
 
-        val urlCrearUsuario = "http://192.168.1.145:1337/usuario"
+        val urlCrearUsuario = "http://172.31.104.142:1337/usuario"
 
         btn_create_account.setOnClickListener {
 
@@ -37,8 +38,14 @@ class RegistrarUsuarioActivity : AppCompatActivity() {
                             Log.i("http","Error: ${error}")
                         }
                         is Result.Success ->{
+
                             val usuarioString = result.get()
                             Log.i("http","${usuarioString}")
+                            val intentExplicito = Intent(
+                                this,
+                                MainActivity::class.java
+                            )
+                            startActivity(intentExplicito)
                         }
                     }
                 }

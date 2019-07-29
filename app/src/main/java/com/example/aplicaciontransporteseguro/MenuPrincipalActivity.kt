@@ -1,5 +1,6 @@
 package com.example.aplicaciontransporteseguro
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,8 +19,14 @@ class MenuPrincipalActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                Toast.makeText(this,"Accion 3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Cerrando Sesión", Toast.LENGTH_SHORT).show();
+                val intentExplicito = Intent(
+                    this,
+                    MainActivity::class.java
+                    )
+                startActivity(intentExplicito)
                 return@OnNavigationItemSelectedListener true
+
             }
         }
         false
