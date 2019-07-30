@@ -11,11 +11,16 @@ class MenuPrincipalActivity : AppCompatActivity() {
     public val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                Toast.makeText(this,"Accion 1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Denuncias", Toast.LENGTH_SHORT).show();
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
-                Toast.makeText(this,"Accion 2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Perfil", Toast.LENGTH_SHORT).show();
+                val intentExplicito = Intent(
+                    this,
+                    DenunciaActivity::class.java
+                )
+                startActivity(intentExplicito)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {

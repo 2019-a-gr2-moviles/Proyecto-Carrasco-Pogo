@@ -9,6 +9,7 @@ module.exports = {
     'Registrar': async function(req, res){
         var values = req.body;
         var Agentes = await Usuario.findOne({fkTipoUsuario:1});
+        console.log(values);
         if(Agentes!=null)
         {
             if(Agentes.length > 0)
@@ -18,15 +19,15 @@ module.exports = {
             }
             else
             {
-                values.id_agente=0; 
+                values.id_agente=0;
             }
         }
         else
         {
             values.id_agente=0;
         }    
-        var denuncia = await Denuncia.create(values);
-        return res.json({registro: 'Satisfactorio', id: denuncia.id});
+        await Denuncia.create(values);
+        return res.json({registro: 'Satisfactorio'});
   },
     'Mostrar': async function(req, res){
         var values = req.body;

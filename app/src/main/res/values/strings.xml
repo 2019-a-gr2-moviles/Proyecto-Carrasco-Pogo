@@ -14,4 +14,11 @@
     <string name="create_account">Crear Cuenta</string>
     <string name="crerate_account_link">Crea una cuenta aquí</string>
     <string name="new_to_system">Nuevo en el sistema</string>
+    <string name="denuncias">Mis denuncias</string>
+    <string name="nueva_denuncia">Nueva Denuncia</string>
+    <string name="imagen_perfil">Imagen de perfil</string>
+    <string name="back">Regresar a mi perfil</string>
+    <string name="nombre_denuncia">Nombre de la denuncia</string>
+    <string name="denuncia_placeholder">Exceso de velocidad</string>
+    <string name="galeria">Galeria</string>
 </resources>
